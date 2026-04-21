@@ -1,0 +1,219 @@
+AXIOM ROBOTICS — PRODUCT CATALOG
+=============================================================
+PRODUCT: AX-100 Industrial Assembly Robot
+=============================================================
+Model: AX-100
+Category: Industrial Automation
+Release Year: 2023
+Price: $48,500 (base configuration)
+Overview:
+The AX-100 is a 6-axis articulated industrial robot designed for high-speed assembly tasks on
+manufacturing lines. It delivers precision positioning with a repeatability of ±0.02 mm, making it ideal for
+electronics assembly, automotive parts fitting, and small component handling.
+Key Specifications:
+ Payload Capacity: 10 kg
+ Reach: 1,450 mm
+ Degrees of Freedom: 6
+ Repeatability: ±0.02 mm
+ Maximum Speed: 8,000 mm/s (TCP)
+ Weight: 165 kg
+ Power Consumption: 1.2 kW (idle), 3.5 kW (peak)
+ IP Rating: IP54
+ Mounting: Floor, ceiling, wall
+ Controller: AX-Controller v3.2
+ Communication Protocols: EtherCAT, Profinet, Modbus TCP, ROS2
+Supported Operating Systems:
+ AX-OS 4.0 (proprietary)
+ ROS2 Humble (via bridge adapter)
+Accessories:
+ AX-GRP-100: Parallel jaw gripper (0–80 mm stroke)
+ AX-CAM-3D: Integrated 3D vision system
+ AX-FORCE: 6-axis force/torque sensor
+ AX-TRACK: Linear track extension (2 m, 4 m, 6 m options)
+Use Cases:
+
+
+ PCB component placement
+ Screw driving and fastening
+ Pick-and-place from conveyor belts
+ Quality inspection (with vision kit)
+Certifications:
+CE, UL, ISO 10218-1, RoHS
+=============================================================
+PRODUCT: AX-200 Collaborative Robot (Cobot)
+=============================================================
+Model: AX-200
+Category: Collaborative Robot
+Release Year: 2024
+Price: $32,000 (base configuration)
+Overview:
+The AX-200 is a lightweight collaborative robot (cobot) designed to work safely alongside human
+workers. Equipped with built-in force-torque sensing on all joints, it automatically stops when
+unexpected contact is detected. Its tool-free quick-change end-effector system allows operators to
+switch tasks in under 60 seconds.
+Key Specifications:
+ Payload Capacity: 5 kg
+ Reach: 900 mm
+ Degrees of Freedom: 6
+ Repeatability: ±0.05 mm
+ Maximum Speed: 1,500 mm/s (TCP)
+ Weight: 18.4 kg
+ Power Consumption: 150 W (idle), 500 W (peak)
+ IP Rating: IP66
+ Mounting: Floor, ceiling, wall, mobile base
+ Controller: Embedded (tablet-based teach pendant)
+ Communication Protocols: Modbus TCP, EtherNet/IP, USB, ROS2
+Safety Features:
+ Power and Force Limiting (PFL) — ISO/TS 15066 compliant
+ Joint torque sensors on all 6 axes
+ Configurable safety zones (speed, force, zone-based)
+ Emergency stop (hardware + software)
+
+
+Programming:
+ Drag-and-drop visual programming (no-code interface)
+ Python SDK (axiom-cobot-sdk >= 2.0)
+ ROS2 Humble compatible
+Accessories:
+ AX-GRIP-MAG: Magnetic gripper (up to 3 kg)
+ AX-GRIP-VAC: Vacuum gripper kit
+ AX-WELD: MIG welding torch adapter
+ AX-MOBILE-BASE: AGV mobile base integration kit
+Use Cases:
+ Machine tending
+ Assembly assistance
+ Lab automation
+ Packaging and palletizing
+Certifications:
+CE, UL, ISO/TS 15066, ISO 10218-1/2
+=============================================================
+PRODUCT: RX-500 Autonomous Mobile Robot (AMR)
+=============================================================
+Model: RX-500
+Category: Autonomous Mobile Robot
+Release Year: 2023
+Price: $21,000
+Overview:
+The RX-500 AMR is a self-navigating floor robot designed for indoor logistics. It uses simultaneous
+localization and mapping (SLAM) to navigate without floor markings or QR codes, adapting dynamically
+to changing environments. It integrates with warehouse management systems (WMS) via REST API.
+Key Specifications:
+ Maximum Payload: 250 kg (flatbed) / 100 kg (shelf-tote)
+ Maximum Speed: 2.0 m/s (loaded), 2.5 m/s (unloaded)
+ Battery: 48 V LiFePO4, 100 Ah
+ Battery Life: 10–12 hours per charge
+
+
+ Charging: Auto-docking, 2-hour fast charge (20%–100%)
+ Navigation: SLAM (LiDAR + depth cameras)
+ Safety Sensors: 2× LiDAR (360°), 4× ultrasonic, 2× depth cameras
+ Communication: Wi-Fi 6 (802.11ax), optional 4G/LTE
+ Fleet Management: Axiom Fleet Manager (cloud or on-premise)
+ IP Rating: IP52
+ Operating Temperature: 0°C to 45°C
+Supported WMS Integrations:
+ SAP EWM
+ Oracle WMS Cloud
+ Manhattan Associates WMS
+ Custom REST API
+Use Cases:
+ Goods-to-person fulfillment
+ Inter-department material transport
+ Hospital medication and supply delivery
+ Cleanroom logistics
+Certifications:
+CE, UL, ISO 3691-4, IEC 62133
+=============================================================
+PRODUCT: SX-10 Service Robot
+=============================================================
+Model: SX-10
+Category: Service / Hospitality Robot
+Release Year: 2024
+Price: $15,500
+Overview:
+The SX-10 is a humanoid-inspired upper-body service robot designed for customer-facing
+environments such as hotels, retail, healthcare, and education. It features a 10-inch touchscreen chest
+display, multilingual voice interaction, and two 3-DOF arm assemblies for handling light objects up to 1
+kg per arm.
+Key Specifications:
+ Height: 1.4 m (standing), adjustable base
+
+
+ Weight: 55 kg
+ Arms: 2× 3-DOF, 1 kg payload per arm
+ Display: 10-inch capacitive touchscreen (Android)
+ Voice: Multilingual TTS/STT (32 languages)
+ Battery: 24 V, 40 Ah Li-ion; 8-hour runtime
+ Charging: Manual dock or auto-dock
+ Navigation: SLAM-based, obstacle avoidance
+ Connectivity: Wi-Fi 5, Ethernet, 4G optional
+ Camera: 2× RGB-D cameras (front + rear)
+ IP Rating: IP42
+Software Platform:
+ Axiom ServiceOS 2.1
+ REST API for custom integrations
+ Compatible with hotel PMS systems (Opera, Mews)
+Use Cases:
+ Concierge and wayfinding assistance
+ Room service delivery (trays, documents)
+ Retail product demonstrations
+ Hospital patient guidance and vitals display
+Certifications:
+CE, FCC, RoHS, ISO 13482
+=============================================================
+PRODUCT: EX-300 Exoskeleton — Industrial Assist
+=============================================================
+Model: EX-300
+Category: Wearable Robotics / Exoskeleton
+Release Year: 2024
+Price: $9,800 per unit
+Overview:
+The EX-300 is a passive-active hybrid exoskeleton designed to reduce musculoskeletal strain for
+workers performing repetitive overhead or heavy-lifting tasks. It provides up to 20 kg of lift assistance
+and monitors the wearer's biomechanics in real-time through embedded IMU sensors.
+Key Specifications:
+
+
+ Assist Force: Up to 20 kg equivalent lift support
+ Weight (unit): 6.8 kg
+ Degrees of Assisted Motion: Shoulder (2-DOF), lower back (1-DOF)
+ Battery: 7.4 V, 10 Ah; 8-hour runtime
+ Sensors: 9-axis IMU per joint, pressure insoles (optional)
+ Data Output: Bluetooth 5.0 to Axiom ErgoApp
+ Adjustable Fit: S/M/L/XL frame sizes (torso and leg straps)
+ Operating Temperature: -10°C to 50°C
+Software:
+ Axiom ErgoApp (iOS / Android / Windows)
+ Dashboards for team fatigue monitoring
+ Alert thresholds for overexertion events
+ CSV data export for EHS reporting
+Use Cases:
+ Warehouse picking and packing
+ Automotive assembly line overhead tasks
+ Construction structural assembly
+ Aircraft maintenance
+Certifications:
+CE, ISO 16570, OSHA compliant guidelines
+=============================================================
+SPARE PARTS & CONSUMABLES
+=============================================================
+AX-100 / AX-200 Spare Parts:
+ AX-JOINT-KIT: Full joint bearing replacement kit — $320
+ AX-CABLE-HARNESS: Internal wiring harness — $180
+ AX-TEACH-PEN: Replacement teach pendant — $450
+ AX-BRUSH-KIT: Servo motor brush replacement set — $95
+RX-500 Spare Parts:
+ RX-BATTERY-CELL: Replacement LiFePO4 cell module — $280
+ RX-LIDAR-UNIT: 360° LiDAR sensor replacement — $1,200
+ RX-WHEEL-SET: Drive wheel assembly (set of 4) — $340
+ RX-CHARGER-DOCK: Charging dock replacement — $520
+SX-10 Spare Parts:
+ SX-DISPLAY-ASM: 10-inch touchscreen assembly — $390
+
+
+ SX-ARM-JOINT: Single arm joint replacement — $210
+ SX-SPEAKER-SET: Speaker module (stereo pair) — $85
+EX-300 Consumables:
+ EX-STRAP-KIT: Full harness strap replacement set — $75
+ EX-BATTERY-EX300: Replacement battery pack — $145
+ EX-INSOLE-PAIR: Pressure insole pair — $55

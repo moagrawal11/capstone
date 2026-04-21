@@ -1,0 +1,196 @@
+AXIOM ROBOTICS — CUSTOMER SERVICE FREQUENTLY ASKED QUESTIONS (FAQ)
+Last Updated: April 2026
+Support Portal: support.axiomrobotics.com
+Support Email: support@axiomrobotics.com
+Phone: +1-800-AXIOM-RX (weekdays 8 AM – 6 PM EST)
+=============================================================
+SECTION 1: ORDERING & PURCHASING
+=============================================================
+Q: How do I place an order for an Axiom Robotics product?
+A: You can place an order through three channels:
+1. Online Store: Visit store.axiomrobotics.com and configure your robot with desired options.
+2. Authorized Reseller: Find your nearest reseller at axiomrobotics.com/partners.
+3. Direct Sales: Contact our sales team at sales@axiomrobotics.com for volume pricing and custom
+configurations.
+For enterprise orders (5+ units) or government procurement, contact enterprise@axiomrobotics.com for
+dedicated account support.
+Q: What is the lead time for robot delivery?
+A: Standard lead times:
+- AX-200 Cobot: 3–4 weeks (in stock configurations), 6–8 weeks (custom)
+- AX-100 Industrial Robot: 6–8 weeks
+- RX-500 AMR: 4–6 weeks
+- SX-10 Service Robot: 3–5 weeks
+- EX-300 Exoskeleton: 1–2 weeks (standard sizes in stock)
+Lead times may increase during peak demand periods. You will receive a confirmed ship date in your
+order confirmation email.
+Q: Can I customize the robot configuration before purchase?
+A: Yes. All robot models except the EX-300 support factory customization options including:
+- Pre-installed end-effectors (grippers, welding tools)
+- Custom paint / branding panels (minimum order: 3 units)
+- Extended reach arms (AX-100 only, +200 mm extension available)
+- Pre-configured software packages
+Contact your sales representative for a custom quote.
+Q: What payment methods do you accept?
+A: Axiom Robotics accepts:
+- Bank wire transfer (required for orders above $25,000)
+- Corporate purchase orders (Net-30 terms, approved accounts)
+- Credit card (Visa, Mastercard, Amex) — available for orders up to $25,000
+- Financing through Axiom Capital Partners (24/36/48-month terms, subject to credit approval)
+Q: Do you offer demo units or trial programs?
+A: Yes. The "Try Before You Deploy" program allows qualified customers to:
+
+
+- Trial an AX-200 or RX-500 for 30 days at their facility
+- Includes remote setup support and one on-site training session
+- A refundable deposit equal to 20% of the unit price is required
+Contact sales@axiomrobotics.com to apply.
+=============================================================
+SECTION 2: INSTALLATION & SETUP
+=============================================================
+Q: What are the floor space and power requirements for the AX-100?
+A: The AX-100 requires:
+- Floor Space: Minimum 3 m × 3 m safety perimeter (robot reach + 1.5 m clearance)
+- Power Supply: 3-phase 400 V AC / 50–60 Hz, 32 A breaker (dedicated circuit)
+- Grounding: IEC 60364-5-54 compliant grounding required
+- Compressed Air: 6 bar, 100 L/min (if pneumatic gripper is used)
+- Ambient Temperature: 5°C–45°C, humidity 10%–95% (non-condensing)
+Full site preparation checklist is available in the AX-100 Installation Manual (Doc# IM-AX100-EN-v3).
+Q: How long does installation take for the AX-200 cobot?
+A: A standard AX-200 installation takes 4–8 hours for a trained technician and includes:
+- Mechanical mounting and base anchoring (1–2 hours)
+- Electrical and network connection (1 hour)
+- Software activation and license registration (30 minutes)
+- Basic calibration and datum setting (1–2 hours)
+- Operator safety walkthrough (1 hour)
+First-time installations by customers without prior cobot experience should schedule Axiom's
+Professional Installation Service ($1,200 flat fee, includes one-day on-site training).
+Q: Does the RX-500 AMR require floor modifications or markings?
+A: No. The RX-500 uses SLAM (Simultaneous Localization and Mapping) and does not require
+floor tape, QR codes, or magnetic strips. It builds its own map of the environment during the
+initial mapping session using its LiDAR sensors. However, you should:
+- Ensure consistent lighting (avoid complete darkness or direct mirror-reflected laser interference)
+- Mark dynamic areas (doors, intersections) using Axiom's virtual zone configuration in Fleet Manager
+- Keep aisles at least 1.2 m wide for comfortable navigation with its 0.8 m body width
+Q: How do I set up the SX-10 on first boot?
+A: Follow these steps for SX-10 first boot:
+1. Power on using the rocker switch on the rear panel — robot will boot in ~90 seconds.
+2. Connect to your facility Wi-Fi using the on-screen setup wizard (Settings → Network → Wi-Fi).
+3. Register the unit at register.axiomrobotics.com using the serial number from the base label.
+4. Download and apply any pending Axiom ServiceOS updates (Settings → System → Update).
+5. Set your language and timezone (Settings → Localization).
+6. Configure your custom greeting and navigation map using the Axiom Concierge App.
+The full SX-10 Quick Start Guide (QSG-SX10-EN) is included in the box and available at
+docs.axiomrobotics.com.
+Q: Can the AX-200 be ceiling-mounted?
+
+
+A: Yes. The AX-200 supports ceiling, wall, and floor mounting. When ceiling-mounting:
+- Use the AX-CEILING-BRACKET kit (sold separately, $220).
+- Ensure the mounting surface can support at least 60 kg (unit weight × 3 safety factor).
+- Update the mounting orientation in the pendant settings (Setup → Robot Configuration → Mounting
+Position → Ceiling).
+Ignoring the mounting orientation setting will cause incorrect gravity compensation and may
+compromise safety.
+=============================================================
+SECTION 3: SOFTWARE & CONNECTIVITY
+=============================================================
+Q: What software is included with the AX-200?
+A: The AX-200 includes:
+- AX-OS 4.0 Teach Pendant Interface (tablet-based, Android)
+- Axiom Visual Programmer 3.0 (drag-and-drop no-code interface)
+- Python SDK (axiom-cobot-sdk, available on PyPI)
+- ROS2 Humble bridge package (axiom_ros2_driver)
+- 1-year subscription to Axiom Cloud Monitor (remote telemetry dashboard)
+Additional paid options: Axiom Vision Suite ($2,400/year), Axiom OPC-UA Gateway ($800, one-time).
+Q: How do I connect the AX-100 to a PLC?
+A: The AX-100 supports EtherCAT, Profinet, and Modbus TCP. Steps for Profinet connection:
+1. Assign the AX-100 controller a static IP in the same subnet as your PLC.
+2. Import the AX-100 GSDML file (available at resources.axiomrobotics.com/gsdml) into your PLC
+engineering software (TIA Portal, Automation Studio, etc.).
+3. Configure I/O signals: 16 inputs and 16 configurable outputs are available over Profinet by default.
+4. Map robot motion programs to PLC trigger signals in AX-OS → I/O Configuration.
+Full PLC integration guide: Doc# IG-AX100-PLC-EN-v2.
+Q: Can I use the RX-500 without the cloud Fleet Manager?
+A: Yes. Axiom Fleet Manager is available in two deployment modes:
+- Cloud-hosted (default): data routed through Axiom's AWS-hosted instance.
+- On-premise: Docker-based deployment on a local server (Linux, 8-core / 16 GB RAM recommended).
+License required — contact licensing@axiomrobotics.com.
+A single RX-500 can also operate in standalone mode without Fleet Manager, but multi-robot
+coordination, remote monitoring, and WMS integration require Fleet Manager.
+Q: Is the Python SDK compatible with Python 3.12?
+A: Yes. axiom-cobot-sdk v2.3+ supports Python 3.10, 3.11, and 3.12. Install via:
+pip install axiom-cobot-sdk
+For ROS2 integration, use the axiom_ros2_driver package available on the Axiom GitHub at
+github.com/axiom-robotics/ros2_driver.
+Q: How do I update the firmware on the RX-500?
+A: Firmware updates can be applied in two ways:
+
+
+1. Over-the-Air (OTA): In Fleet Manager, navigate to Fleet → Devices → [robot name] → Firmware →
+Check for Updates. The robot must be docked and above 50% battery.
+2. Manual USB update: Download the firmware image from support.axiomrobotics.com/firmware, copy
+to a FAT32 USB drive, insert into the RX-500 maintenance port (rear panel), and follow on-screen
+prompts during the maintenance boot sequence.
+Always back up robot maps and task configurations before applying firmware updates.
+=============================================================
+SECTION 4: SAFETY & COMPLIANCE
+=============================================================
+Q: What safety standards does the AX-200 cobot comply with?
+A: The AX-200 is certified to:
+- ISO 10218-1:2011 — Industrial robots: Safety requirements
+- ISO/TS 15066:2016 — Collaborative robot safety (Power and Force Limiting)
+- CE Marking (EU Machinery Directive 2006/42/EC)
+- UL 1740 — Industrial robots safety standard (North America)
+A full Declaration of Conformity and safety data sheet are available at compliance.axiomrobotics.com.
+Q: Does the AX-100 require a safety cage?
+A: The AX-100 is a full-speed industrial robot and by default requires a physical safety fence or
+light curtain perimeter. Alternatives to a physical cage:
+- Install Axiom SafeGuard LiDAR zones (sold separately) to create a virtual safety envelope — reduces
+the need for a physical fence in some applications.
+- Conduct a risk assessment per ISO 12100 and ISO 10218-2. Axiom's Professional Services team can
+assist with the assessment and documentation.
+The AX-200 cobot does NOT require a safety cage for speeds below 250 mm/s, provided a valid TS
+15066 risk assessment has been completed.
+Q: What should I do in a robot emergency?
+A: Immediately press the red Emergency Stop (E-Stop) button:
+- Hardware E-Stop: Located on the teach pendant and on the robot base (AX-100/200) or side panel
+(RX-500).
+- Software E-Stop: Available in the Fleet Manager dashboard for AMRs.
+After an E-Stop event:
+1. Do not attempt to restart until the hazard is cleared and identified.
+2. Check the fault log (AX-OS → Diagnostics → Fault Log or Fleet Manager → Events).
+3. Reset the E-Stop by turning the button clockwise (physical) or clicking Reset in software.
+4. Perform a slow-speed jog to verify normal operation before resuming production.
+For injury emergencies, call emergency services first. Report all incidents to safety@axiomrobotics.com
+for support.
+=============================================================
+SECTION 5: TRAINING & SUPPORT
+=============================================================
+
+
+Q: What training options are available?
+A: Axiom Robotics offers multiple training tracks:
+- AX-Series Operator Training (1 day): Safe operation, basic programming, E-Stop procedures —
+$400/person
+- AX-Series Integrator Training (3 days): Advanced programming, I/O integration, maintenance —
+$1,200/person
+- RX-500 Fleet Administrator Training (2 days): Fleet Manager, map management, WMS integration —
+$900/person
+- Online Self-Paced Courses: Free with product registration at learn.axiomrobotics.com
+On-site customized training is available — contact training@axiomrobotics.com.
+Q: How do I contact technical support?
+A: Support options by severity:
+- Critical (robot down, production stopped): Call +1-800-AXIOM-RX immediately, 24/7 coverage.
+- High (degraded performance, safety alert): Open a priority ticket at support.axiomrobotics.com.
+Response within 4 hours.
+- Medium/Low (general questions, configuration help): Email support@axiomrobotics.com or use the
+support portal. Response within 1 business day.
+All registered products include 12 months of standard support. Extended support contracts available.
+Q: How do I register my product?
+A: Register at register.axiomrobotics.com within 30 days of purchase to activate:
+- Warranty coverage
+- Software update access
+- Axiom Cloud Monitor trial
+- Access to the Knowledge Base and firmware downloads
+You will need the model number and serial number from the product label (located on the base for
+robots, on the frame for exoskeletons).

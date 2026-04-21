@@ -1,0 +1,267 @@
+AXIOM ROBOTICS — TECHNICAL TROUBLESHOOTING GUIDE
+Version: 3.1 | April 2026
+Applicable Products: AX-100, AX-200, RX-500, SX-10, EX-300
+Support Portal: support.axiomrobotics.com
+=============================================================
+SECTION 1: AX-100 / AX-200 — ARM ROBOT ISSUES
+=============================================================
+ISSUE: Robot does not power on
+Symptoms: No LED indicators, teach pendant does not turn on, no fan noise.
+Possible Causes:
+1. Main power switch is off or circuit breaker has tripped.
+2. Fuse inside the controller cabinet has blown (AX-100 only).
+3. Emergency Stop is engaged.
+4. Power cable is not seated properly.
+Resolution Steps:
+1. Verify the main rocker switch on the controller cabinet is in the ON position.
+2. Check the facility circuit breaker for the robot's dedicated circuit.
+3. Inspect fuse F1 (20 A, blade-type) in the AX-100 controller's fuse panel (see IM-AX100-EN-v3 §4.2).
+4. Ensure the E-Stop buttons on the teach pendant and robot base are released (rotate clockwise).
+5. Reseat the power cable at both the wall outlet and controller inlet.
+If the problem persists after all the above, contact Axiom Support with the controller serial number and
+voltage measurement at the input terminals.
+ISSUE: Fault Code E-0x12 — Joint Over-Temperature
+Symptoms: Robot stops mid-task, red fault LED, E-0x12 shown on teach pendant.
+Possible Causes:
+1. Ambient temperature exceeds 45°C.
+2. Robot running at high speed/payload continuously without rest cycles.
+3. Cooling fan blocked or faulty.
+4. Joint bearing worn, causing excess friction.
+Resolution Steps:
+1. Allow robot to cool for 20–30 minutes with power on (cooling fans running).
+2. Check ambient temperature in the work cell — it must not exceed 45°C.
+3. Inspect and clean the cooling vents on the controller and base (use dry compressed air).
+4. Verify that duty cycle requirements are met: for maximum payload at maximum speed, a 70% duty
+cycle is recommended (AX-100), or 80% (AX-200).
+5. If fault recurs after cooling and temperature is within spec, schedule a joint inspection — error may
+indicate early bearing wear. Open a support ticket (Severity: High).
+
+
+ISSUE: Fault Code E-0x21 — Position Error / Path Deviation
+Symptoms: Robot stops during motion, teach pendant shows E-0x21.
+Possible Causes:
+1. Robot collided with an unexpected obstacle.
+2. External force applied to the arm during motion.
+3. Joint encoder calibration drift.
+4. Incorrect payload setting causing torque overload.
+Resolution Steps:
+1. Clear the workspace of any obstacles that may have entered the robot's path.
+2. Check that the payload setting in AX-OS (Setup → Robot → Payload) matches the actual tool and
+workpiece weight.
+3. Perform a joint calibration: AX-OS → Diagnostics → Calibration Wizard → Full Joint Calibration.
+4. Reduce motion speed by 20% and re-run the program to test.
+5. If fault repeats consistently at the same position, the joint encoder may need replacement. Contact
+Axiom Support.
+ISSUE: Teach Pendant Disconnected / Cannot Connect
+Symptoms: Teach pendant shows "Controller Unreachable" or blank screen after boot.
+Possible Causes:
+1. Network cable between pendant and controller is loose or damaged.
+2. Controller IP address has changed.
+3. Pendant firmware is outdated and incompatible with controller firmware.
+Resolution Steps:
+1. Check the Ethernet cable connecting the teach pendant to the EXT port on the controller — reseat if
+loose.
+2. Verify the controller's IP address from its front panel display (if available) or via direct serial console
+connection.
+3. Ensure the teach pendant network settings (Settings → Network → Controller IP) match the
+controller's current IP.
+4. Check firmware versions: Pendant firmware must be within one minor version of controller firmware.
+Update via AX-OS → System → Firmware Update.
+ISSUE: Robot Vibrates or Makes Grinding Noise During Movement
+Symptoms: Audible grinding or clicking during joint movement, vibration felt through the arm.
+Possible Causes:
+1. Joint bearing wear (typically after 15,000+ operating hours without lubrication).
+2. Foreign material (metal chips, dust) inside joint housing.
+3. Loose fasteners in the wrist assembly.
+
+
+Resolution Steps:
+1. Locate the affected joint by moving each axis slowly in jog mode and listening for the noise source.
+2. Inspect joint covers for cracks or missing seals that may allow contaminant ingress.
+3. Check wrist assembly fastener torque per the maintenance schedule (Torque spec: M8 bolts at 22
+Nm).
+4. Apply joint grease at the service port (see Maintenance Manual MM-AX100-EN, §7.3). Use only
+Axiom-approved lubricant AX-GREASE-HD.
+5. If noise persists, schedule a bearing replacement. Operating with worn bearings can cause joint
+failure and is a safety risk.
+=============================================================
+SECTION 2: RX-500 — AUTONOMOUS MOBILE ROBOT ISSUES
+=============================================================
+ISSUE: Robot Cannot Build or Update Map
+Symptoms: Mapping session fails, robot reports "Mapping Error" or stops during initial
+mapping.
+Possible Causes:
+1. LiDAR field of view is partially blocked (packaging foam left in sensor area, sticker over sensor
+window).
+2. Environment has too many reflective or transparent surfaces (glass walls, mirrors).
+3. Low-light conditions below 50 lux.
+4. Robot battery below 20% during mapping session.
+Resolution Steps:
+1. Inspect both LiDAR sensor windows for obstructions — wipe clean with a lint-free cloth.
+2. Add temporary visual markers (cardboard panels) in front of large glass surfaces during the initial
+mapping session; these can be removed after the map is saved.
+3. Ensure ambient lighting is at least 50 lux in all areas to be mapped.
+4. Charge robot to at least 70% battery before beginning a mapping session.
+5. Restart the mapping session from Fleet Manager: Fleet → Robot → [name] → Maps → New Map →
+Start Mapping.
+ISSUE: Robot Frequently Stops or Takes Detours
+Symptoms: Robot halts frequently for obstacles that are not present, or chooses long
+navigation paths.
+Possible Causes:
+1. Ultrasonic sensors triggering false positives (reflections, hanging cables, chains).
+2. Outdated map causing route conflicts with real environment.
+3. Dynamic obstacle sensitivity set too high.
+Resolution Steps:
+
+
+1. Check for cables, hanging signs, or reflective surfaces near the robot's path at sensor height (floor
+level to 50 cm).
+2. Update the facility map if the environment has changed: Fleet Manager → Maps → [map name] →
+Update Map.
+3. Adjust dynamic obstacle sensitivity: Fleet Manager → Robot Settings → Navigation → Obstacle
+Sensitivity → Medium (default is High for initial deployment).
+4. Review the obstacle log to identify false positive trigger areas: Fleet Manager → Analytics →
+Obstacle Events.
+ISSUE: Robot Does Not Return to Charging Dock
+Symptoms: Low battery alert triggers but robot does not navigate to the charging dock.
+Possible Causes:
+1. Charging dock location not marked or marked incorrectly on the map.
+2. Dock charging contacts dirty or misaligned.
+3. Auto-dock behavior disabled in settings.
+Resolution Steps:
+1. Verify dock position on the map: Fleet Manager → Maps → Chargers — the dock icon should be
+placed at the actual physical dock location.
+2. Check charging contact cleanliness: wipe contacts on both the dock and robot with a dry cloth.
+Contacts should be bright metal, not oxidized.
+3. Ensure auto-dock is enabled: Fleet Manager → Robot Settings → Power → Auto-Dock on Low
+Battery → Enabled.
+4. Manually command the robot to dock: Fleet Manager → Robot → [name] → Actions → Send to
+Charger.
+5. If the robot approaches the dock but fails to align, recalibrate dock position by dragging the dock
+marker in Fleet Manager to the exact physical position and running the "Dock Calibration" routine.
+ISSUE: Robot Wi-Fi Drops Frequently
+Symptoms: Robot shows offline in Fleet Manager intermittently, tasks interrupted.
+Possible Causes:
+1. Weak Wi-Fi signal in parts of the facility.
+2. Robot moving between access points without seamless handoff (roaming issue).
+3. Wi-Fi channel congestion.
+Resolution Steps:
+1. Run an Axiom Wi-Fi Site Survey Tool scan (available in Fleet Manager Tools) to identify coverage
+gaps.
+2. Verify all access points are configured for fast roaming (802.11r / 802.11k). Consult your network
+administrator.
+3. Configure the robot's network to use the 5 GHz band only if your APs support it (Fleet Manager →
+Robot Settings → Network → Band → 5 GHz).
+4. For facilities with multiple robots, ensure fleet task queuing is enabled so tasks are re-queued
+automatically if a robot loses and regains connectivity.
+
+
+=============================================================
+SECTION 3: SX-10 — SERVICE ROBOT ISSUES
+=============================================================
+ISSUE: Voice Recognition Not Working
+Symptoms: Robot does not respond to spoken commands, microphone icon shows error.
+Possible Causes:
+1. Microphone input is muted in system settings.
+2. Language pack not installed for the selected language.
+3. Background noise exceeds the robot's cancellation threshold.
+Resolution Steps:
+1. Check microphone setting: Settings → Audio → Microphone → Ensure it is set to "Active" and
+volume is above 50%.
+2. Verify language pack: Settings → Language → Installed Languages. Download the required
+language if missing (requires Wi-Fi connection).
+3. In noisy environments (>70 dB), attach the optional SX-LAPEL-MIC external microphone for closer
+audio capture.
+4. Restart the Axiom VoiceEngine service: Settings → Services → VoiceEngine → Restart.
+5. Test with the built-in microphone diagnostic: Settings → Diagnostics → Microphone Test.
+ISSUE: Navigation Errors — Robot Bumps into Objects or Gets Stuck
+Symptoms: SX-10 collides with low-profile objects, chairs, or glass, or enters a navigation loop.
+Possible Causes:
+1. Low-profile obstacles (chairs, cables) below the camera field of view.
+2. Glass doors or transparent walls not mapped correctly.
+3. Map is outdated due to furniture rearrangement.
+Resolution Steps:
+1. Add physical bumpers or reflective stickers to low-profile furniture (chairs, cable runs) so the robot's
+sensors can detect them.
+2. Mark glass panels as obstacles in the Axiom Concierge App map editor.
+3. Re-scan affected areas: Axiom Concierge App → Maps → [map name] → Update Scan → Drive
+robot through the changed area.
+4. Reduce navigation speed in high-traffic areas: Axiom Concierge App → Settings → Navigation
+Speed → Slow (0.3 m/s).
+ISSUE: Display Touchscreen Unresponsive
+Symptoms: Touchscreen does not respond to taps, frozen UI.
+
+
+Resolution Steps:
+1. Restart the display application: hold the side button for 3 seconds → Restart App.
+2. If the full OS appears frozen, perform a soft reboot: Settings → System → Reboot (if accessible) or
+hold the power button for 8 seconds.
+3. Clean the screen with a microfiber cloth — oil and smudges can interfere with capacitive touch.
+4. If issue persists, factory reset the display app: Settings → Apps → Axiom Concierge → Reset App
+Data. (Note: this clears custom UI settings; maps and robot settings are preserved.)
+5. Hardware failure: If screen remains unresponsive after reboot, open a support ticket and order
+replacement part SX-DISPLAY-ASM.
+=============================================================
+SECTION 4: EX-300 — EXOSKELETON ISSUES
+=============================================================
+ISSUE: Exoskeleton Does Not Power On
+Resolution Steps:
+1. Check battery charge level: LED indicator on upper back unit. Amber = low charge, Red = critically
+low.
+2. Charge the battery using the provided AC adapter — LED will turn solid green when fully charged
+(approximately 3 hours from empty).
+3. If LED does not respond at all after charging for 1 hour, try a different power outlet and adapter.
+4. If still no response, perform a hard reset: hold both shoulder release buttons simultaneously for 5
+seconds.
+5. Contact Axiom Support if the unit fails to power on after a confirmed full charge.
+ISSUE: Axiom ErgoApp Does Not Connect to Exoskeleton
+Symptoms: App shows "Device Not Found" or "Connect Timed Out".
+Resolution Steps:
+1. Ensure Bluetooth is enabled on your phone/tablet.
+2. Ensure the exoskeleton is powered on and within 10 m of the mobile device.
+3. On the exoskeleton, press the BT pairing button (located on the left forearm panel) until the LED
+blinks blue rapidly.
+4. In the Axiom ErgoApp, tap "Scan for Devices" — the EX-300 should appear as "AXIOM-EX-[serial]".
+5. If the device appears but pairing fails, clear the pairing history on the exoskeleton: Settings button +
+BT button held together for 5 seconds (LED will flash red twice to confirm reset). Then retry pairing.
+ISSUE: Incorrect Assist Force or Reduced Range of Motion
+Symptoms: Exoskeleton feels too stiff, restricts natural arm movement, or provides no assist.
+Resolution Steps:
+
+
+1. Ensure the correct frame size is being used — wrong size causes mechanical binding. Refer to fit
+guide (QG-EX300-FIT-EN) for size selection.
+2. Adjust tension knobs on shoulder joints (turn counterclockwise to reduce resistance, clockwise to
+increase assist torque).
+3. In the Axiom ErgoApp, recalibrate the unit: App → Device → Calibration → Full Body Calibration.
+Have the wearer stand in the neutral position (arms at sides) during calibration.
+4. Check that assist mode is set correctly: App → Settings → Assist Profile → Select appropriate preset
+(Light Lifting, Heavy Lifting, Overhead Work).
+5. If the mechanical assist mechanism feels seized or damaged, remove the exoskeleton immediately
+and do not use until inspected by a certified Axiom technician.
+=============================================================
+SECTION 5: GENERAL DIAGNOSTIC TOOLS
+=============================================================
+Axiom Diagnostics Center (all arm robots):
+- Location: AX-OS → Diagnostics
+- Available tools: Fault Log, Joint Status, Network Tests, Controller Health, Motor Current Graph,
+Encoder Readback
+Fleet Manager Diagnostics (RX-500):
+- Location: Fleet Manager → Analytics
+- Available reports: Obstacle Events, Route Efficiency, Battery Health Trend, Connectivity Log, Task
+Completion Rate
+Axiom ErgoApp Diagnostics (EX-300):
+- Location: App → Device → Reports
+- Available reports: Session activity log, Joint angle history, Fatigue score, Overexertion events
+Axiom Remote Assistance:
+- Registered customers can grant Axiom Support real-time remote access to the Axiom Cloud Monitor
+dashboard.
+- Contact support to initiate a remote session: support.axiomrobotics.com → Open Ticket → Request
+Remote Session.
+- Available during business hours (8 AM–6 PM EST, weekdays) and for 24/7 critical cases.
+Log Collection for Support:
+- AX-100/AX-200: AX-OS → Diagnostics → Export Logs → Save to USB or email to support ticket.
+- RX-500: Fleet Manager → Device → Export Diagnostics Bundle.
+- SX-10: Settings → Diagnostics → Export System Report (sent directly to linked support ticket if Wi-Fi
+connected).
+- Include the robot serial number, firmware version, and a description of the fault in every support ticket.

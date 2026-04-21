@@ -1,0 +1,208 @@
+AXIOM ROBOTICS — WARRANTY & SUPPORT POLICY
+Version: 2.4 | Effective Date: January 1, 2026
+Legal Entity: Axiom Robotics Inc., 4800 Innovation Drive, Austin, TX 78701, USA
+Policy URL: axiomrobotics.com/warranty
+=============================================================
+SECTION 1: LIMITED WARRANTY COVERAGE
+=============================================================
+1.1 Warranty Period by Product
+Product | Standard Warranty | Extended Warranty Available
+ ------------------------|-------------------|----------------------------
+AX-100 Industrial Robot | 24 months | Up to 60 months
+AX-200 Collaborative Robot| 24 months | Up to 60 months
+RX-500 Autonomous AMR | 18 months | Up to 48 months
+SX-10 Service Robot | 12 months | Up to 36 months
+EX-300 Exoskeleton | 12 months | Up to 24 months
+Spare Parts & Accessories| 6 months | Not available
+The warranty period begins on the date of delivery to the original purchasing customer (or date of
+installation if installed by Axiom Professional Services, whichever is later).
+1.2 What Is Covered
+Axiom Robotics warrants that its products will be free from defects in materials and workmanship under
+normal use and maintenance conditions for the warranty period. Coverage includes:
+ Manufacturing defects in hardware components
+ Controller and embedded firmware defects
+ Motors, encoders, gearboxes, and bearings (subject to normal wear exclusions below)
+ Structural components (frames, joints, link arms)
+ Electrical assemblies (wiring harnesses, PCBs)
+ Display panels and sensors (SX-10, RX-500)
+1.3 What Is NOT Covered
+The following are explicitly excluded from warranty coverage:
+ Damage caused by accidents, misuse, neglect, unauthorized modification, or repair
+ Normal wear and tear items: belts, brushes, seals, consumable lubricants, filters
+ Damage from operating outside specified environmental conditions (temperature, humidity, IP rating)
+ Cosmetic damage (scratches, dents, paint) not affecting function
+ Damage from use of non-Axiom-approved accessories, tools, or lubricants
+ Software customizations, third-party integrations, or data loss
+ Battery degradation beyond 70% of original capacity after 12 months of normal use (batteries are
+considered wear items)
+ EX-300 strap assemblies, padding, and fit accessories (consumables)
+ Damage caused by exceeding rated payload or operating speeds
+ Products with removed, altered, or illegible serial number labels
+=============================================================
+
+
+SECTION 2: WARRANTY CLAIM PROCESS
+=============================================================
+2.1 How to File a Warranty Claim
+Step 1 — Register your product (if not already done):
+Visit register.axiomrobotics.com and complete product registration using your serial number and
+purchase order number. Registration is required to activate warranty services.
+Step 2 — Contact Axiom Support:
+ Submit a ticket at support.axiomrobotics.com, OR
+ Call +1-800-AXIOM-RX during business hours (8 AM–6 PM EST, weekdays), OR
+ Email warranty@axiomrobotics.com with subject line "Warranty Claim — [Model] — [Serial Number]"
+Step 3 — Provide the following information:
+ Product model and serial number
+ Date of purchase and proof of purchase (invoice or order confirmation)
+ Description of the defect and steps to reproduce
+ Fault codes or error logs (exported from AX-OS or Fleet Manager)
+ Photos or video of the defect (where applicable)
+Step 4 — Axiom Support Review:
+Axiom will acknowledge your claim within 1 business day and may request additional information. A
+warranty determination (approved or denied) will be issued within 5 business days of receiving all
+required information.
+2.2 Warranty Resolution Options
+If your claim is approved, Axiom will choose the most appropriate remedy:
+A. On-site repair: An Axiom certified technician will be dispatched to your site (standard for AX-100,
+RX-500, and large components).
+B. Advance replacement: A replacement unit or part will be shipped to you before you return the
+defective item (advance credit card hold required for unit replacements; released upon return of
+defective unit within 30 days).
+C. Depot repair: You ship the unit to an Axiom service center; repaired and returned within 10 business
+days of receipt. Axiom covers inbound and outbound shipping costs for valid warranty claims.
+D. Replacement unit: For products under 90 days old with a confirmed manufacturing defect, Axiom will
+issue a full unit replacement.
+2.3 Out-of-Warranty Repairs
+Non-warranty repairs are available at Axiom's standard service rates:
+ Diagnostic fee: $250 (applied toward repair cost if approved)
+ Labor rate: $185/hour
+ Parts: Cost + 15% handling
+ Travel fee for on-site service: $0.65/mile + $150 dispatch fee
+Contact service@axiomrobotics.com for a repair quotation.
+=============================================================
+SECTION 3: EXTENDED WARRANTY & SERVICE PLANS
+
+
+=============================================================
+3.1 Axiom Care Plans
+Axiom Care Basic (included with purchase):
+ 12 or 24 months standard warranty (per product above)
+ Email and portal support during business hours
+ Access to firmware updates and knowledge base
+ Response SLA: Next business day
+Axiom Care Plus (optional, annual subscription):
+Pricing: AX-200 → $1,800/year | AX-100 → $3,200/year | RX-500 → $2,400/year | SX-10 →
+$1,100/year
+Includes:
+ All Basic coverage
+ Priority 4-hour response SLA for high-severity issues
+ One annual preventive maintenance visit by Axiom technician
+ 10% discount on spare parts purchases
+ Remote assistance sessions (up to 10/year)
+Axiom Care Premium (optional, annual subscription):
+Pricing: Contact sales for custom quote
+Includes:
+ All Care Plus coverage
+ 24/7 technical support hotline
+ 4-hour on-site response SLA (within 100 miles of Axiom service centers)
+ Unlimited remote assistance sessions
+ Loaner unit provision during depot repairs (subject to availability)
+ 20% discount on spare parts and accessories
+ Annual calibration certification with documentation
+3.2 Multi-Year Extended Warranty Pricing (from date of purchase)
+AX-100 Industrial Robot:
+ 3-year extended: $4,800 total
+ 5-year extended: $7,500 total
+AX-200 Collaborative Robot:
+ 3-year extended: $2,900 total
+ 5-year extended: $4,600 total
+RX-500 AMR:
+ 3-year extended: $2,400 total
+ 4-year extended: $3,600 total
+SX-10 Service Robot:
+ 2-year extended (total 3 years): $1,200
+ 3-year extended (total 4 years): $1,900
+=============================================================
+SECTION 4: RETURN POLICY
+=============================================================
+
+
+4.1 Returns for Non-Warranty Purchases (Satisfaction Returns)
+Axiom accepts returns of unopened, unused products within 30 days of delivery for a full refund, minus
+a 10% restocking fee. Conditions:
+ Product must be in original packaging with all accessories and documentation
+ Return authorization (RA) number required — email returns@axiomrobotics.com
+ Customer responsible for return shipping and insurance
+ Custom-configured products, special-order items, and software licenses are non-returnable
+4.2 Defective on Arrival (DOA)
+If a product is defective upon delivery:
+ Report within 7 calendar days of delivery to warranty@axiomrobotics.com
+ DOA units are eligible for full replacement at no charge, including return shipping
+ Axiom will ship a replacement unit within 2 business days of DOA confirmation
+ DOA determination requires basic diagnostic steps (Axiom Support will guide you)
+=============================================================
+SECTION 5: LIMITATION OF LIABILITY
+=============================================================
+To the maximum extent permitted by applicable law:
+ Axiom's liability under this warranty shall not exceed the original purchase price of the defective
+product.
+ Axiom is not liable for consequential, incidental, or indirect damages including lost production, lost
+revenue, or damage to third-party equipment, even if advised of the possibility of such damages.
+ This warranty gives you specific legal rights. You may also have other rights that vary by jurisdiction.
+ This warranty is the sole and exclusive warranty provided. Axiom disclaims all implied warranties of
+merchantability and fitness for a particular purpose to the extent allowed by law.
+For questions about this policy, contact:
+Axiom Robotics Customer Support
+support.axiomrobotics.com | warranty@axiomrobotics.com | +1-800-AXIOM-RX
+=============================================================
+SECTION 6: PREVENTIVE MAINTENANCE SCHEDULE
+=============================================================
+Following the recommended maintenance schedule is a condition for warranty coverage.
+Failure to maintain service records may void warranty for related component failures.
+AX-100 Industrial Robot — Preventive Maintenance Schedule:
+Monthly:
+ Inspect robot for loose fasteners, cable wear, gripper wear
+ Clean all vents and cooling fans
+ Review fault log and clear non-critical entries
+Every 3 months:
+ Lubricate joint 1-3 gearboxes per lubrication chart (MM-AX100-EN §7)
+
+
+ Inspect and torque all external fasteners to spec
+ Clean and inspect teaching pendant and cable
+Every 6 months:
+ Full joint calibration (AX-OS → Diagnostics → Calibration)
+ Inspect brake function on all joints
+ Check encoder cable insulation
+Annually:
+ Full overhaul inspection by Axiom certified technician (required to maintain extended warranty)
+ Replace worn seals and belts per service bulletin
+RX-500 AMR — Preventive Maintenance Schedule:
+Weekly:
+ Clean LiDAR sensor windows (dry microfiber cloth)
+ Clean charging contacts (dry cloth)
+ Review battery health in Fleet Manager
+Monthly:
+ Inspect drive wheels for wear (replace if tread depth < 3 mm)
+ Check all cable connections at maintenance access panel
+ Verify map accuracy against physical environment
+Every 6 months:
+ Replace in-line air filter (if dusty environment)
+ Inspect suspension components
+ Full diagnostic report review
+Annually:
+ Battery capacity test and cell inspection
+ Drive motor inspection
+ Certified technician inspection
+EX-300 Exoskeleton — Preventive Maintenance Schedule:
+Daily:
+ Inspect harness straps for fraying or buckle damage
+ Wipe down frame with clean, damp cloth
+Monthly:
+ Check joint pivot points for smooth operation — apply EX-LUBE-KIT if stiff
+ Inspect battery connector pins for corrosion
+ Review ErgoApp session reports for anomalies
+Every 6 months:
+ Replace harness strap set (EX-STRAP-KIT) — mandatory per safety guidelines if visible wear
+ Full inspection by supervisory safety officer
+ Battery capacity test and replacement if below 80% of original capacity
